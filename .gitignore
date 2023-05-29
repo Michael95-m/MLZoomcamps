@@ -1,2 +1,7 @@
 *.parquet
 .ipynb_checkpoints
+artifacts
+__pycache__
+*.db
+*.pkl
+output/
