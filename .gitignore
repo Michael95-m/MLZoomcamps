@@ -1,8 +1,16 @@
 *.parquet
 .ipynb_checkpoints
-artifacts
 __pycache__
 *.db
+<<<<<<< HEAD
 *.pkl
 output/
+=======
+train.pkl
+test.pkl
+val.pkl
+regressor.pkl
+output/
+Homework/Homework-2/artifacts/
+>>>>>>> eea000526379cb94097d1f4fb2653e82b0d7f0c0
 wandb/
