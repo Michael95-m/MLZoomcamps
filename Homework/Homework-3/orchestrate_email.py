@@ -129,21 +129,6 @@ def train_best_model(
         )
     return None
 
-@task(log_prints=True)
-def email_send_message_task(
-    email_address: str
-    ) -> None:
-    """sent an email"""  
-    email_server_credentials = EmailServerCredentials.load("email-block")
-    email_send_message(
-        email_server_credentials=email_server_credentials,
-        subject="status about training process",
-        msg="training process finished",
-        email_to=email_server_credentials.username
-    )
-    return None 
-
-
 @flow
 def main_flow_hw_email(
     train_path: str = "./data/green_tripdata_2023-02.parquet",
@@ -169,7 +154,13 @@ def main_flow_hw_email(
     train_best_model(X_train, X_val, y_train, y_val, dv)
 
     ## email send
-    email_send_message_task("minkhantmgmg.mk19@gmail.com")
+    email_server_credentials = EmailServerCredentials.load("email-block")
+    email_send_message(
+        email_server_credentials=email_server_credentials,
+        subject="status about training process",
+        msg="training process finished",
+        email_to=email_server_credentials.username
+    )
 
 
 
