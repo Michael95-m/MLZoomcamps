@@ -155,6 +155,7 @@ def main_flow_hw_email(
 
     ## email send
     email_server_credentials = EmailServerCredentials.load("email-block")
+    print(email_server_credentials.username)
     email_send_message(
         email_server_credentials=email_server_credentials,
         subject="status about training process",
