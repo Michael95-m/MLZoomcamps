@@ -1,4 +1,5 @@
 {
   "main-flow": "Homework/Homework-3/orchestrate.py:main_flow",
-  "main-flow-hw": "Homework/Homework-3/orchestrate.py:main_flow_hw"
+  "main-flow-hw": "Homework/Homework-3/orchestrate.py:main_flow_hw",
+  "main-flow-hw-email": "Homework/Homework-3/orchestrate_email.py:main_flow_hw_email"
 }
