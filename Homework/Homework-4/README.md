@@ -66,8 +66,7 @@ docker build -f Dockerfile.optional -t mlops-zoomcamp-hw4-optional:v1 .
 Secondly, as the example from [homework.md](https://github.com/DataTalksClub/mlops-zoomcamp/blob/main/cohorts/2023/04-deployment/homework.md#publishing-the-image-to-dockerhub), the docker image need to be tagged a new file and push to docker hub. In order to do this, you have to login by using ```docker login -u <your-username>``` first.
 
 ```
-docker tag mlops-zoomcamp-hw4-optional:v1  mkm2/zoomcamp-model-optional:mlo
-ps-3.10.0-slim
+docker tag mlops-zoomcamp-hw4-optional:v1  mkm2/zoomcamp-model-optional:mlops-3.10.0-slim
 docker push mkm2/zoomcamp-model-optional:mlops-3.10.0-slim
 ```
 
@@ -77,8 +76,8 @@ If you wanna run this docker image, you need to pay extra two enviroment variabl
 docker run --rm -it \
 -e AWS_ACCESS_KEY_ID=<your-access-key> \
 -e AWS_SECRET_ACCESS_KEY=<your-secret-key> \
---name april_duration_predict_s3_save \ ## it doesn't need actually
+--name april_duration_predict_s3_save \ ## this line doesn't need actually
 mlops-zoomcamp-hw4-optional:v1 4 2022
 ```
 
-You can find (my docker image)[https://hub.docker.com/r/mkm2/zoomcamp-model-optional] at the docker hub 
+You can find [my docker image](https://hub.docker.com/r/mkm2/zoomcamp-model-optional) at the docker hub 
