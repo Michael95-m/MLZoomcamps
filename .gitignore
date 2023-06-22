@@ -11,3 +11,6 @@ regressor.pkl
 output/
 Homework/Homework-2/artifacts/
 wandb/
+Homework/Homework-4/model.bin
+Homework/Homework-2/
+Homework/Homework-2-wandb/
