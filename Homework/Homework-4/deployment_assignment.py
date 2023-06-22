@@ -61,23 +61,6 @@ def ride_duration_prediction(
     print("Predicting the duration...")
     y_pred = predict(dicts, dv, model)
 
-    ## for optional bonus question
-    ## to save the data in s3, aws credentials needed to be configured
-    ## otherwise it will get the error
-    ## you can comment the below code and 
-    # run the above code only if aws is not configured in your system
-    print("Saving output to s3")
-    df["predictions"] = y_pred 
-    output_file = get_outputfile(year, month, taxi_type)
-    df.to_parquet(
-        output_file,
-        engine="pyarrow", 
-        compression=None,
-        index=False
-    )
-    print(f"Output is saved at {output_file} bucket")
-
-
     return y_pred 
 
 if __name__ == "__main__":
