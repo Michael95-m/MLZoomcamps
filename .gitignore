@@ -12,5 +12,7 @@ output/
 Homework/Homework-2/artifacts/
 wandb/
 Homework/Homework-4/model.bin
-Homework/Homework-2/
-Homework/Homework-2-wandb/
+Homework/Homework-2-wandb/homework.ipynb
+Homework/Homework-2/*
+Homework/Homework-5/data/*.parquet
+Homework/Homework-5/models/*.bin
