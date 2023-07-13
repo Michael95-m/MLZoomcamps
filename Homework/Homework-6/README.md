@@ -62,3 +62,55 @@ If you want to run like above, you need to give permission to execute this shell
 ```
 chmod +x ./integration_test.sh
 ```
+
+## Bonus: Linting, Formatting and Makefile
+
+Although the assignment don't ask us to do about code quality check, I did some extra task by myself.
+
+### Linting and Formatting
+
+First install linting and formatting tools inside the dev packages.
+```
+pipenv install --dev
+```
+
+To run linting and formatting, 
+
+```
+    isort .
+	black .
+	pylint --recursive=y .
+```
+
+Before applying with `black` and `isort`, we should check the coming difference by using `--diff` tag.
+
+```
+    isort --diff . | less
+    black --diff . | less
+```
+
+## Make and Makefile
+
+To run these steps from Makefile, we can run like `make stage`.
+
+For setup,
+```
+    make setup
+```
+
+For quality checking,
+```
+    make quality_check
+```
+
+For integration testing,
+```
+./integration_test.sh
+```
+
+For unit testing,
+```
+pytest tests
+```
+
+
