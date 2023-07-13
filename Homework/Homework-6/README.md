@@ -22,10 +22,15 @@ In order to run the integration test, there is two ways.
 The first way is running the whole pipeline step by step. First, you need to start `localstack` by using `docker compose`. The localstack will be used for simulating the s3 service.
 
 ```bash
-docker compose up
+docker compose up -d
 ```
 
-After starting localstack services, we need to set the environment variable named  `S3_ENDPOINT_URL`.
+After starting localstack service, you will need to create s3 bucket in localstack(not in actual cloud).
+```
+aws --endpoint-url=http://localhost:4566 s3 mb s3://nyc-duration
+```
+
+We also need to set the environment variable named  `S3_ENDPOINT_URL`. This can make the script more configurable.
 
 ```bash
 export S3_ENDPOINT_URL=http://localhost:4566
@@ -37,6 +42,16 @@ python integration_test.py
 ```
 
 If there is no error showing, the test is passed!!!
+
+You can stop the localstack service by running
+```
+docker compose down 
+```
+
+Extra: If you wanna check the file and their metadata inside s3 bucket for localstack, run this:
+```
+aws --endpoint-url=http://localhost:4566 s3 ls --summarize --human-readable --recursive s3://nyc-duration/
+```
 
 The second way is to write the shell script that automate the steps mentioned above. Then run this shell script.
 ```bash
