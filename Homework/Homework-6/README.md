@@ -77,9 +77,9 @@ pipenv install --dev
 To run linting and formatting, 
 
 ```
-    isort .
-	black .
-	pylint --recursive=y .
+isort .
+black .
+pylint --recursive=y .
 ```
 
 Before applying with `black` and `isort`, we should check the coming difference by using `--diff` tag.
@@ -103,14 +103,12 @@ For quality checking,
     make quality_check
 ```
 
-For integration testing,
-```
-./integration_test.sh
-```
-
 For unit testing,
 ```
-pytest tests
+make test
 ```
 
-
+For integration testing,
+```
+make integration_test
+```
