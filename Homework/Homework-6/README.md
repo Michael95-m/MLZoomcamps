@@ -85,8 +85,8 @@ pylint --recursive=y .
 Before applying with `black` and `isort`, we should check the coming difference by using `--diff` tag.
 
 ```
-    isort --diff . | less
-    black --diff . | less
+isort --diff . | less
+black --diff . | less
 ```
 
 ## Make and Makefile
@@ -95,12 +95,12 @@ To run these steps from Makefile, we can run like `make stage`.
 
 For setup,
 ```
-    make setup
+make setup
 ```
 
 For quality checking,
 ```
-    make quality_check
+make quality_check
 ```
 
 For unit testing,
