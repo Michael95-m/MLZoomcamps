@@ -16,3 +16,4 @@ Homework/Homework-2-wandb/homework.ipynb
 Homework/Homework-2/*
 Homework/Homework-5/data/*.parquet
 Homework/Homework-5/models/*.bin
+.vscode
