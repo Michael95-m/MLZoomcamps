@@ -5,10 +5,10 @@ repos:
    rev: v3.2.0
    hooks:
      -  id: trailing-whitespace
-        files: ^Homework/Homework-6/
+        files: ^Homework/Homework-6/*
      -  id: end-of-file-fixer
-        files: ^Homework/Homework-6/
+        files: ^Homework/Homework-6/*
      -  id: check-yaml
-        files: ^Homework/Homework-6/
+        files: ^Homework/Homework-6/*
      -  id: check-added-large-files
-        files: ^Homework/Homework-6/
+        files: ^Homework/Homework-6/*
